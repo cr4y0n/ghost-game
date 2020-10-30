@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" onclick="jump()">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,22 +15,24 @@
     <div id="screen">
       <!-- <hr class="background-line" /> -->
       <div id="character">
-        <img src="ghost.png" alt="" />
+        <img src="Ghost_PC_2.gif" alt="ghost" />
       </div>
       <div id="skull">
-        <img src="skull.png" alt="" />
+        <img src="Skull_PC.gif" alt="skull" />
       </div>
       <div class="over">
         <h1>Game Over<br />Press Reload</h1>
       </div>
     </div>
 
+    <p>Highscore: <span id="highScoreSpan"></span></p>
+    <p>Score: <span id="scoreSpan"></span></p>
+    <button class="jump" onclick="jump()">
+      <h2>Jump</h2>
+    </button>
     <button class="reload" onclick="reload()">
       <h2>Reload</h2>
     </button>
-
-    <p>Highscore: <span id="highScoreSpan"></span></p>
-    <p>Score: <span id="scoreSpan"></span></p>
 
     <script src="script.js"></script>
   </body>

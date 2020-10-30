@@ -21,7 +21,7 @@ var gameOver = setInterval(() => {
     window.getComputedStyle(skull).getPropertyValue("left")
   );
 
-  if (skullLeft < 85 && skullLeft > 0 && ghostTop >= 110) {
+  if (skullLeft < 90 && skullLeft > 0 && ghostTop >= 110) {
     skull.style.animation = "none";
     skull.style.display = "none";
     document.querySelector(".over").style.display = "block";

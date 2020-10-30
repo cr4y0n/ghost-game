@@ -15,17 +15,18 @@ body {
 } */
 
 #screen {
-  margin: 50px 10%;
-  width: 80%;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-bottom: 5px;
+  width: 700px;
   height: 400px;
   border-radius: 5px;
-  background-color: rgb(65, 65, 65);
+  background-color: black;
   position: relative;
 }
 #character {
   position: absolute;
   top: 260px;
-  border: 0px solid red;
 }
 #character img {
   width: 121px;
@@ -36,34 +37,33 @@ body {
 
 @keyframes jump {
   0% {
-    top: 262px;
+    top: 260px;
   }
   30% {
-    top: 100px;
-  }
-  70% {
     top: 90px;
   }
+  70% {
+    top: 80px;
+  }
   100% {
-    top: 262px;
+    top: 260px;
   }
 }
 #skull {
   position: absolute;
   bottom: 0;
   right: 0;
-  animation: animate 2s linear infinite;
-  border: 0px solid blue;
+  animation: animate 2.2s linear infinite;
 }
 #skull img {
   width: 64px;
 }
 @keyframes animate {
   0% {
-    left: 750px;
+    left: 655px;
   }
   100% {
-    left: 0px;
+    left: -3px;
   }
 }
 /* hr {
@@ -79,16 +79,52 @@ body {
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 25px;
+  font-size: 20px;
   color: rgb(241, 241, 241);
   text-align: center;
 }
+
+/* BUTTONS */
 .reload {
-  margin-left: 45%;
+  margin-left: 50px;
   padding: 20px;
   box-shadow: none;
   border-radius: 50px;
   border: none;
-  background-color: #a3a3a3;
+  background-color: #000000;
   color: rgb(255, 255, 255);
+}
+.reload:hover {
+  transition: all 0.1s ease-in-out;
+  transform: scale(1.1);
+  background-color: rgb(122, 0, 0);
+}
+.reload:focus {
+  outline: none;
+}
+.jump {
+  margin-left: 280px;
+  padding: 20px;
+  box-shadow: none;
+  border-radius: 50px;
+  border: none;
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+}
+.jump:hover {
+  transition: all 0.1s ease-in-out;
+  transform: scale(1.1);
+  background-color: rgb(122, 0, 0);
+}
+.jump:focus {
+  outline: none;
+}
+
+/* SCORE TEXT */
+p {
+  margin-left: 50px;
+  font-family: Helvetica, sans-serif;
+  font-size: smaller;
+  font-weight: bold;
+  text-transform: uppercase;
 }
