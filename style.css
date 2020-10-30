@@ -48,14 +48,14 @@ body {
     top: 262px;
   }
 }
-#cactus {
+#skull {
   position: absolute;
   bottom: 0;
   right: 0;
   animation: animate 2s linear infinite;
   border: 0px solid blue;
 }
-#cactus img {
+#skull img {
   width: 64px;
 }
 @keyframes animate {
