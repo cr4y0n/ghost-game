@@ -24,11 +24,11 @@ body {
   background-color: black;
   position: relative;
 }
-#character {
+#player {
   position: absolute;
   top: 260px;
 }
-#character img {
+#player img {
   width: 121px;
 }
 .animate {
@@ -49,13 +49,13 @@ body {
     top: 260px;
   }
 }
-#skull {
+#obstacle {
   position: absolute;
   bottom: 0;
   right: 0;
   animation: animate 2.2s linear infinite;
 }
-#skull img {
+#obstacle img {
   width: 64px;
 }
 @keyframes animate {
@@ -73,7 +73,7 @@ body {
   background: #505050;
   height: 3px;
 } */
-.over {
+.message {
   display: none;
   position: absolute;
   top: 45%;
