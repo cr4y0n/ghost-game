@@ -28,10 +28,10 @@ function jump() {
   }, 1000);
 }
 var gameOver = setInterval(() => {
-  var ghostTop = parseInt(window.getComputedStyle(player).getPropertyValue("top"));
+  var playerTop = parseInt(window.getComputedStyle(player).getPropertyValue("top"));
   var obstacleLeft = parseInt(window.getComputedStyle(obstacle).getPropertyValue("left"));
 
-  if(obstacleLeft < 90 && obstacleLeft > 0 && ghostTop >= 110) {
+  if(obstacleLeft < 90 && obstacleLeft > 0 && playerTop >= 110) {
     obstacle.style.animation = "none";
     obstacle.style.display = "none";
     document.querySelector(".message").style.display = "block";
@@ -39,9 +39,9 @@ var gameOver = setInterval(() => {
     if(score > highScore && Math.floor(score / 100) > 0) {
       highScore = score;
       document.getElementById("highScoreBoard").innerHTML = Math.floor(highScore / 100);
-    }
-    if(typeof(Storage) !== "undefined") { //kontrollerar om webläsaren stödjer lokal lagring
-      localStorage.setItem("highScore", highScore); //sparar värdet från variabeln i attributet "highScore"
+      if(typeof(Storage) !== "undefined") { //kontrollerar om webläsaren stödjer lokal lagring
+        localStorage.setItem("highScore", highScore); //sparar värdet från variabeln i attributet "highScore"
+      }
     }
     //* Återställer poängen till 0
     score = 0;
